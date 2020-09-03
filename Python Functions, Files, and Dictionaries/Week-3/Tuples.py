@@ -32,6 +32,4 @@ gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Ja
 
 num_medals=[]
 for i in gold.items():
-    num_medals.append(i[1])
-  
-''' Q-6.   
+    num_medals.append(i[1])  
