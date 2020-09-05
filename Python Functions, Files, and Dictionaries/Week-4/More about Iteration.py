@@ -42,20 +42,44 @@ def sublist(list):
 
 print(sublist(["mujju", "randi", "shona", "dhona", "STOP"]))
 
-''' Q-4. '''
+''' Q-4. Write a function called stop_at_z that iterates through a list of strings. Using a while loop, append each string to a new list until
+the string that appears is “z”. The function should return the new list.'''
 
+def stop_at_z(list):
+    i = 0
+    while i < len(list):
+        if list[i] == 'z':
+            return list[0:i]
+        i+=1
+    return list[0:i]
+print(stop_at_z(['a', 'bhav', 'mc', 'z', 'as']))
 
+''' Q-5.Below is a for loop that works. Underneath the for loop, rewrite the problem so that it does the same thing, but using a while loop instead
+of a for loop. Assign the accumulated total in the while loop code to the variable sum2. Once complete, sum2 should equal sum1.'''
 
-''' Q-5. Write code that will count the number of vowels in the sentence s and assign the result to the variable num_vowels. For this problem,
-vowels are only a, e, i, o, and u. Hint: use the in operator with vowels.'''
+sum1 = 0
 
-s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
-vowels = ['a','e','i','o','u']
-s = list(s)
-num_vowels = 0
-for i in s:
-    for j in i:
-        if j in vowels:
-            num_vowels+=1
+lst = [65, 78, 21, 33]
 
-print(num_vowels)    
+for x in lst:
+    sum1 = sum1 + x
+    
+sum2 = 0
+x = 0
+while x < len(lst):
+    sum2 = sum2 + lst[x]
+    x = x + 1
+print(sum2)
+
+''' Q-6. Challenge: Write a function called beginning that takes a list as input and contains a while loop that only stops once the element of the 
+list is the string ‘bye’. What is returned is a list that contains up to the first 10 strings, regardless of where the loop stops. (i.e., if it stops
+on the 32nd element, the first 10 are returned. If “bye” is the 5th element, the first 4 are returned.) If you want to make this even more of a challenge,
+do this without slicing'''
+
+def beginning(x):
+    n = 0
+    lst = []
+    while 'bye' not in x[n] and n < 10:
+        lst.append(x[n])
+        n = n + 1
+    return lst
