@@ -16,6 +16,6 @@ for c in str1:
         freq[c] = 0
     freq[c] = freq[c] + 1
 
-''' Q-3.     
+''' Q-3.     fsbfb
 
 
